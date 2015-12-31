@@ -17,12 +17,12 @@
     },
     "require": {
         "php": ">5.4.0",
-        "symfony/options-resolver": "~2.3",
-        "symfony/console":"~2.3"
+        "symfony/options-resolver": "^2.8.1",
+        "symfony/console":"^2.8.1"
     },
     "require-dev": {
-        "symfony/finder": "~2.3",
-        "symfony/stopwatch": "~2.3",
+        "symfony/finder": "^2.8.1",
+        "symfony/stopwatch": "^2.8.1",
         "kzykhys/pygments": ">=1.0"
     },
     "suggest": {

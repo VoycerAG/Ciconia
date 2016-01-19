@@ -3,7 +3,7 @@
 namespace Ciconia\Console\Command;
 
 use Symfony\Component\Console\Command\Command;
-use Symfony\Component\Console\Helper\ProgressHelper;
+use Symfony\Component\Console\Helper\ProgressBar;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
@@ -73,9 +73,8 @@ class CompileCommand extends Command
 
         $count = iterator_count($finder);
 
-        /* @var ProgressHelper $progress */
-        $progress = $this->getHelper('progress');
-        $progress->start($output, $count);
+        $progress = new ProgressBar($output);
+        $progress->start($count);
 
         /* @var \Symfony\Component\Finder\SplFileInfo $file */
         foreach ($finder as $file) {
@@ -109,5 +108,4 @@ class CompileCommand extends Command
     {
         return "#!/usr/bin/env php\n<?php Phar::mapPhar('ciconia.phar'); require 'phar://ciconia.phar/bin/ciconia'; __HALT_COMPILER();";
     }
-
 }

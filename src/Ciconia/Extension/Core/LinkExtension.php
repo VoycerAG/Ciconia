@@ -196,6 +196,14 @@ class LinkExtension implements ExtensionInterface, RendererAwareInterface
             return;
         }
 
+        // Unfortunatelly I have to do this because of initial incorrect capture
+        if (preg_match('/\*\*.*\*\*>/', $text->getString())) {
+            $text->setString(str_replace('**>', '>**', $text->getString()));
+        }
+        if (preg_match('/\*.*\*>/', $text->getString())) {
+            $text->setString(str_replace('*>', '>*', $text->getString()));
+        }
+
         $text->replace('{<((?:https?|ftp):[^\'">\s]+)>}', function (Text $w, Text $url) {
             $this->markdown->emit('escape.special_chars', [$url->replace('/(?<!\\\\)_/', '\\\\_')]);
 

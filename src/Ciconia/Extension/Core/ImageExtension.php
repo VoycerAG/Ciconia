@@ -90,7 +90,7 @@ class ImageExtension implements ExtensionInterface, RendererAwareInterface
                         $attr['title'] = $title->escapeHtml();
                     }
 
-                    return $this->getRenderer()->renderImage($url, array('attr' => $attr));
+                    return ' ' . $this->getRenderer()->renderImage($url, array('attr' => $attr));
                 } else {
                     if ($options['strict']) {
                         throw new SyntaxError(

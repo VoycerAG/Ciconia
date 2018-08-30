@@ -193,5 +193,4 @@ class Ciconia
             $extension->register($markdown);
         }
     }
-
 }

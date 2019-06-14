@@ -17,8 +17,8 @@
     },
     "require": {
         "php": ">5.4.0",
-        "symfony/options-resolver": "^2.8.42|^3.4.12",
-        "symfony/console":"^2.8.42|^3.4.12"
+        "symfony/options-resolver": "^3.4.12",
+        "symfony/console":"^3.4.12"
     },
     "require-dev": {
         "symfony/finder": "^2.8.42|^3.4.12",

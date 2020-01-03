@@ -16,13 +16,13 @@
         }
     },
     "require": {
-        "php": ">5.4.0",
-        "symfony/options-resolver": "^3.4.12",
-        "symfony/console":"^3.4.12"
+        "php": ">=7.3.13",
+        "symfony/options-resolver": "^3.4.36|^4.4.2",
+        "symfony/console":"^3.4.36|^4.4.2"
     },
     "require-dev": {
-        "symfony/finder": "^2.8.42|^3.4.12",
-        "symfony/stopwatch": "^2.8.42|^3.4.12",
+        "symfony/finder": "^3.4.36|^4.4.2",
+        "symfony/stopwatch": "^3.4.36|^4.4.2",
         "kzykhys/pygments": ">=1.0"
     },
     "suggest": {
